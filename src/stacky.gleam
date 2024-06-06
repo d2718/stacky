@@ -2,7 +2,7 @@ import gleam/erlang/process
 import gleam/int
 import gleam/io
 import gleam/list
-import gleam/regex
+import gleam/regexp
 import gleam/string
 import pprint
 
@@ -143,7 +143,7 @@ pub fn frame_to_string(stack_frame: StackFrame) -> String {
     "#"
     <> " "
     <> stack_index
-    |> string.pad_left(to: 2, with: "0")
+    |> string.pad_start(to: 2, with: "0")
     <> "\t"
 
   let line = case qualified_module_name != erlang_module_name {
@@ -259,16 +259,16 @@ pub fn qualified_module_name(stack_frame: StackFrame) -> String {
     stack_frame
     |> erlang_module_name()
 
-  let assert Ok(double_at_re) = regex.from_string("@@")
-  let assert Ok(single_at_re) = regex.from_string("@")
+  let assert Ok(double_at_re) = regexp.from_string("@@")
+  let assert Ok(single_at_re) = regexp.from_string("@")
   let has_double_ats =
     erlang_module_name
-    |> regex.scan(with: double_at_re)
+    |> regexp.scan(with: double_at_re)
     |> list.is_empty
     == False
   let has_ats =
     erlang_module_name
-    |> regex.scan(with: single_at_re)
+    |> regexp.scan(with: single_at_re)
     |> list.is_empty
     == False
 

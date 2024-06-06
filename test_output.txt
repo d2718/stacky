@@ -1,0 +1,12 @@
+[0;31mF[0m
+Failures:
+
+  1) stacky_test.stacky_test: module 'stacky_test'
+[0;31m     Values were not equal
+     expected: StackTrace("Trace", [StackFrame(StackIndex(6), ErlangModuleName("stacky_test"), FunctionName("stacky_test"), FunctionArity(0), ErlangFileName("stacky/build/dev/erlang/stacky/_gleam_artefacts/stacky_test.erl"), ErlangLineNumber(65)), StackFrame(StackIndex(5), ErlangModuleName("eunit_test"), FunctionName("-mf_wrapper/2-fun-0-"), FunctionArity(2), ErlangFileName("eunit_test.erl"), ErlangLineNumber(274)), StackFrame(StackIndex(4), ErlangModuleName("eunit_test"), FunctionName("run_testfun"), FunctionArity(1), ErlangFileName("eunit_test.erl"), ErlangLineNumber(72)), StackFrame(StackIndex(3), ErlangModuleName("eunit_proc"), FunctionName("run_test"), FunctionArity(1), ErlangFileName("eunit_proc.erl"), ErlangLineNumber(544)), StackFrame(StackIndex(2), ErlangModuleName("eunit_proc"), FunctionName("with_timeout"), FunctionArity(3), ErlangFileName("eunit_proc.erl"), ErlangLineNumber(369)), StackFrame(StackIndex(1), ErlangModuleName("eunit_proc"), FunctionName("handle_test"), FunctionArity(2), ErlangFileName("eunit_proc.erl"), ErlangLineNumber(527))])
+          got: StackTrace("Trace", [StackFrame(StackIndex(6), ErlangModuleName("stacky_test"), FunctionName("stacky_test"), FunctionArity(0), ErlangFileName("stacky/build/dev/erlang/stacky/_gleam_artefacts/stacky_test.erl"), ErlangLineNumber(70)), StackFrame(StackIndex(5), ErlangModuleName("eunit_test"), FunctionName("-mf_wrapper/2-fun-0-"), FunctionArity(2), ErlangFileName("eunit_test.erl"), ErlangLineNumber(274)), StackFrame(StackIndex(4), ErlangModuleName("eunit_test"), FunctionName("run_testfun"), FunctionArity(1), ErlangFileName("eunit_test.erl"), ErlangLineNumber(72)), StackFrame(StackIndex(3), ErlangModuleName("eunit_proc"), FunctionName("run_test"), FunctionArity(1), ErlangFileName("eunit_proc.erl"), ErlangLineNumber(544)), StackFrame(StackIndex(2), ErlangModuleName("eunit_proc"), FunctionName("with_timeout"), FunctionArity(3), ErlangFileName("eunit_proc.erl"), ErlangLineNumber(369)), StackFrame(StackIndex(1), ErlangModuleName("eunit_proc"), FunctionName("handle_test"), FunctionArity(2), ErlangFileName("eunit_proc.erl"), ErlangLineNumber(527))])[0m
+[0;36m     output: [0m
+
+Finished in 0.011 seconds
+[0;31m1 tests, 1 failures
+[0m
